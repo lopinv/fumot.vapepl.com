@@ -30,18 +30,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>FUMOT · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-fumot/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-fumot/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://fumot.vapepl.com/">FUMOT</a><span class="sep">›</span><a href="https://fumot.vapepl.com/produkty/">Produkty</a><span class="sep">›</span>FUMOT RANDM TORNADO 9000 PUFFS</nav>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-fumot/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://fumot.vapepl.com/">FUMOT</a><span class="sep">›</span><a href="https://fumot.vapepl.com/produkty/">Produkty</a><span class="sep">›</span>FUMOT RANDM TORNADO 9000 PUFFS</nav>
 <div class="model-hero">
   <div class="model-hero-media"><img src="/assets/img/15e543d67672216e-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS" width="360" height="360" fetchpriority="high" decoding="async"></div>
   <div class="model-hero-info">
@@ -67,7 +87,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-blueberry-ice/"><img src="/assets/img/ed6aa1151cd58111-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — BLUEBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -78,7 +98,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-blueberry-raspberry/"><img src="/assets/img/5ae0bc7dcd32379b-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — BLUEBERRY RASPBERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -89,7 +109,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice mint">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-cool-mint/"><img src="/assets/img/03303f7c5170be06-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Cool Mint" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -100,7 +120,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-cool-mint" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-cool-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-grape/"><img src="/assets/img/696baa381e250e8b-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -111,7 +131,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/4b511cf1e72de0bc-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -122,7 +142,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-lemon-lime-2/"><img src="/assets/img/364a83091bb82760-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Lemon &amp; Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -133,7 +153,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-mixed-berries/"><img src="/assets/img/cd150d2043f17f8c-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -144,7 +164,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-orange-soda/"><img src="/assets/img/9b58bfb4747f2cb4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Orange Soda" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -155,7 +175,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-orange-soda" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-orange-soda" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-peach-berry/"><img src="/assets/img/ddec3ef0e60327f4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Peach Berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -166,7 +186,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-peachy-mango-pineapple/"><img src="/assets/img/35a47f0ca46962f0-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Peachy Mango Pineapple" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -177,7 +197,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peachy-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peachy-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-pink-lemonade/"><img src="/assets/img/8e5eb96d97239e4a-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — PINK LEMONADE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -188,7 +208,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-straw-mango/"><img src="/assets/img/40e6d030e21308f4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Straw Mango" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -199,7 +219,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-straw-mango" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-straw-mango" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-strawberry-cream/"><img src="/assets/img/9347f1789c28df1e-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Strawberry Cream" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -210,7 +230,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-cream" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-cream" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-strawberry-ice/"><img src="/assets/img/ee5744cb9470206d-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -221,7 +241,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-strawberry-watermelon/"><img src="/assets/img/4ee67f0ba47f3be6-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -232,7 +252,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-watermelon-bubble-gum/"><img src="/assets/img/bd166e4052d3a99a-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Watermelon bubble gum" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -243,7 +263,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-bubble-gum" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-bubble-gum" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-watermelon-ice/"><img src="/assets/img/d9b8d0e1c225ba73-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -254,7 +274,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
 <script>

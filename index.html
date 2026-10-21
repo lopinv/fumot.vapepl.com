@@ -30,18 +30,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>FUMOT · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-fumot/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-fumot/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-fumot/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
 <main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script>
 <section class="hero"><div class="hero-grid">
   <div class="hero-copy">
     <span class="kicker">Przewodnik marki · FUMOT</span>
@@ -90,7 +110,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-blueberry-on-ice-pineapple-lemonade-peach-mango-watermelon-blue-razz-cherry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-blueberry-on-ice-pineapple-lemonade-peach-mango-watermelon-blue-razz-cherry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape/"><img src="/assets/img/afc270e16822b2c8-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Cola Lime &amp; Cherry Cola &amp; Dr Blue &amp; Strawberry Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -101,7 +121,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit mint sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon/"><img src="/assets/img/c9a6db13030a3e05-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Fresh Menthol Mojito &amp; Pink Lemonade &amp; Cool Mint &amp; Mint Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -112,7 +132,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice/"><img src="/assets/img/0b0cc1ae4c3fa47b-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Grape Burst &amp; Blueberry Sour Raspberry &amp; Strawberry Raspberry Cherry Ice &amp; Cherry Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -123,7 +143,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles/"><img src="/assets/img/ec5399b2bc4b5c8e-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Grape Gummy Bear &amp; Blueberry Hubba Bubba &amp; Watermelon Bubblegum &amp; Skittles" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -134,7 +154,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime/"><img src="/assets/img/7f93d957910812fd-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Magic Love &amp; Kiwi Passion Fruit Guava &amp; Dragonfruit Raspberry &amp; Lemon Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -145,7 +165,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry/"><img src="/assets/img/a48b9cf5c48cd455-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Peach Berry &amp; Lemon Peach &amp; Passionfruit Grapefruit Orange&amp; Blueberry Cherry Cranberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -156,7 +176,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry/"><img src="/assets/img/b37813fc941c1a2f-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Peach Ice &amp; Mixed Berries &amp; Lemon Peach Passionfruit &amp; Black Ice Dragonfruit Strawberry," loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -167,7 +187,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
 </section><div id="smaki" class="anchor"></div><section class="block" id="kat-owocowe" data-cat-sec="owocowe">
@@ -181,7 +201,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-peach-mango/"><img src="/assets/img/2616716921643a84-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — peach mango" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -192,7 +212,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-peach-mango" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-peach-mango" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-strawberry-kiwi/"><img src="/assets/img/ed2d435afce70ddc-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -203,7 +223,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-strawberry-watermelon/"><img src="/assets/img/b94eb7c80b87f54e-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -214,7 +234,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-triple-berry/"><img src="/assets/img/eec1f05f16aa280e-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — TRIPLE BERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -225,7 +245,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-triple-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-triple-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-blueberry-raspberry/"><img src="/assets/img/5ae0bc7dcd32379b-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — BLUEBERRY RASPBERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -236,7 +256,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-grape/"><img src="/assets/img/696baa381e250e8b-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -247,7 +267,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/4b511cf1e72de0bc-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -258,7 +278,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-lemon-lime-2/"><img src="/assets/img/364a83091bb82760-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Lemon &amp; Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -269,7 +289,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-mixed-berries/"><img src="/assets/img/cd150d2043f17f8c-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -280,7 +300,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-peach-berry/"><img src="/assets/img/ddec3ef0e60327f4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Peach Berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -291,7 +311,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-peachy-mango-pineapple/"><img src="/assets/img/35a47f0ca46962f0-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Peachy Mango Pineapple" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -302,7 +322,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peachy-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-peachy-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-straw-mango/"><img src="/assets/img/40e6d030e21308f4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Straw Mango" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -313,7 +333,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-straw-mango" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-straw-mango" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-strawberry-watermelon/"><img src="/assets/img/4ee67f0ba47f3be6-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -324,7 +344,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-blueberry-raspberry/"><img src="/assets/img/13932f0b6fd9ea1a-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — BLUEBERRY RASPBERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -335,7 +355,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/7958f30d18a18b87-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -346,7 +366,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-lemon-lime-2/"><img src="/assets/img/aeea3d883b130583-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Lemon &amp; Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -357,7 +377,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-mango-passion-fruit/"><img src="/assets/img/1df7c224e4b002c9-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Mango Passion Fruit" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -368,7 +388,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-mango-passion-fruit" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-mango-passion-fruit" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-mixed-berries/"><img src="/assets/img/798553194aa90c23-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -379,7 +399,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-passion-fruit-kiwi/"><img src="/assets/img/4af6defcd8bb11a6-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Passion Fruit Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -390,7 +410,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-peach-berry/"><img src="/assets/img/11433e6e2cb1d1d7-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Peach Berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -401,7 +421,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-strawberry-watermelon/"><img src="/assets/img/75cf321662d03d43-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -412,7 +432,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime/"><img src="/assets/img/7f93d957910812fd-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Magic Love &amp; Kiwi Passion Fruit Guava &amp; Dragonfruit Raspberry &amp; Lemon Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -423,7 +443,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-magic-love-kiwi-passion-fruit-guava-dragonfruit-raspberry-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry/"><img src="/assets/img/a48b9cf5c48cd455-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Peach Berry &amp; Lemon Peach &amp; Passionfruit Grapefruit Orange&amp; Blueberry Cherry Cranberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -434,7 +454,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-berry-lemon-peach-passionfruit-grapefruit-orange-blueberry-cherry-cranberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-ice-menthol" data-cat-sec="ice-menthol">
@@ -448,7 +468,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-blue-razz-gummy-bear" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-blue-razz-gummy-bear" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-blueberry-on-ice/"><img src="/assets/img/202abbe0bcc94136-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -459,7 +479,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-grape-ice/"><img src="/assets/img/d49d3c64c3bc3756-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — Grape ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -470,7 +490,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice sweet">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-ice-pop/"><img src="/assets/img/50985e5b5b88911f-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — Ice Pop" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -481,7 +501,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-ice-pop" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-ice-pop" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-peach-ice/"><img src="/assets/img/1d01ae11c299870d-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — PEACH ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -492,7 +512,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-peach-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-peach-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-red-energy-ice/"><img src="/assets/img/ead69d4d9956d669-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — RED ENERGY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -503,7 +523,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-strawberry-ice/"><img src="/assets/img/a88764c2be92b5fc-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -514,7 +534,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-watermelon-ice/"><img src="/assets/img/e2420359bcf8536c-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -525,7 +545,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-blue-razz-ice/"><img src="/assets/img/46f9d1123e9f3f20-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Blue Razz Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -536,7 +556,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-blueberry-ice/"><img src="/assets/img/ed6aa1151cd58111-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — BLUEBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -547,7 +567,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice mint">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-cool-mint/"><img src="/assets/img/03303f7c5170be06-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Cool Mint" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -558,7 +578,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-cool-mint" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-cool-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-strawberry-ice/"><img src="/assets/img/ee5744cb9470206d-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -569,7 +589,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-watermelon-ice/"><img src="/assets/img/d9b8d0e1c225ba73-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -580,7 +600,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="sweet">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-blue-razz-gummy-bear/"><img src="/assets/img/89dc6fbba1b7e3e1-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Blue Razz Gummy Bear" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -591,7 +611,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blue-razz-gummy-bear" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blue-razz-gummy-bear" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-blueberry-on-ice/"><img src="/assets/img/77d7e1e9a585c2ba-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -602,7 +622,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-cola-ice/"><img src="/assets/img/2078e90668b466c0-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Cola Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -613,7 +633,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-cola-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-cola-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-pineapple-ice/"><img src="/assets/img/8b0c4aaf4cebf7b7-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — Pineapple Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -624,7 +644,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-pineapple-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-pineapple-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-strawberry-ice/"><img src="/assets/img/db9379661abbf107-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -635,7 +655,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-watermelon-ice/"><img src="/assets/img/bb1217c2c92e44e0-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -646,7 +666,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-blueberry-on-ice-pineapple-lemonade-peach-mango-watermelon-blue-razz-cherry/"><img src="/assets/img/769f1a291bdbe3fc-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Blueberry On Ice &amp; Pineapple Lemonade &amp; Peach Mango Watermelon &amp; Blue Razz Cherry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -657,7 +677,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-blueberry-on-ice-pineapple-lemonade-peach-mango-watermelon-blue-razz-cherry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-blueberry-on-ice-pineapple-lemonade-peach-mango-watermelon-blue-razz-cherry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit mint sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon/"><img src="/assets/img/c9a6db13030a3e05-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Fresh Menthol Mojito &amp; Pink Lemonade &amp; Cool Mint &amp; Mint Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -668,7 +688,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-fresh-menthol-mojito-pink-lemonade-cool-mint-mint-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice/"><img src="/assets/img/0b0cc1ae4c3fa47b-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Grape Burst &amp; Blueberry Sour Raspberry &amp; Strawberry Raspberry Cherry Ice &amp; Cherry Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -679,7 +699,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-burst-blueberry-sour-raspberry-strawberry-raspberry-cherry-ice-cherry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry/"><img src="/assets/img/b37813fc941c1a2f-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Peach Ice &amp; Mixed Berries &amp; Lemon Peach Passionfruit &amp; Black Ice Dragonfruit Strawberry," loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -690,7 +710,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-peach-ice-mixed-berries-lemon-peach-passionfruit-black-ice-dragonfruit-strawberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-strawberry-banana-strawberry-kiwi-strawberry-watermelon-strawberry-ice/"><img src="/assets/img/60bbb2d03df9e3dd-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Strawberry Banana &amp; Strawberry Kiwi &amp; Strawberry Watermelon &amp; Strawberry Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -701,7 +721,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-strawberry-banana-strawberry-kiwi-strawberry-watermelon-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-strawberry-banana-strawberry-kiwi-strawberry-watermelon-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-watermelon-ice-peach-mango-lady-killer-strawberry-red-bull/"><img src="/assets/img/fc393368cecf0422-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Watermelon Ice &amp; Peach Mango &amp; Lady Killer &amp; Strawberry Red Bull" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -712,7 +732,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-watermelon-ice-peach-mango-lady-killer-strawberry-red-bull" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-watermelon-ice-peach-mango-lady-killer-strawberry-red-bull" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-slodycze" data-cat-sec="slodycze">
@@ -726,7 +746,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-cream" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-strawberry-cream" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-watermelon-bubble-gum/"><img src="/assets/img/bd166e4052d3a99a-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Watermelon bubble gum" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -737,7 +757,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-bubble-gum" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-watermelon-bubble-gum" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-watermelon-bubblegum/"><img src="/assets/img/1416752c08206fac-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — watermelon bubblegum" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -748,7 +768,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-watermelon-bubblegum" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-watermelon-bubblegum" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles/"><img src="/assets/img/ec5399b2bc4b5c8e-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Grape Gummy Bear &amp; Blueberry Hubba Bubba &amp; Watermelon Bubblegum &amp; Skittles" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -759,7 +779,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-grape-gummy-bear-blueberry-hubba-bubba-watermelon-bubblegum-skittles" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-napoje" data-cat-sec="napoje">
@@ -773,7 +793,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-mr-blue" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-mr-blue" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-randm-tornado-15000-puffs-pink-lemonade/"><img src="/assets/img/8b398bdf72d1ccf6-480.webp" alt="FUMOT RANDM TORNADO 15000 PUFFS — PINK LEMONADE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -784,7 +804,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-15000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-15000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-orange-soda/"><img src="/assets/img/9b58bfb4747f2cb4-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — Orange Soda" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -795,7 +815,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-orange-soda" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-orange-soda" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-randm-tornado-9000-puffs-pink-lemonade/"><img src="/assets/img/8e5eb96d97239e4a-480.webp" alt="FUMOT RANDM TORNADO 9000 PUFFS — PINK LEMONADE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -806,7 +826,7 @@
       <span class="price">60 zł</span>
       <span class="price-old">65 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-randm-tornado-9000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-randm-tornado-9000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/fumot-leopard-40000-puffs-pink-lemonade/"><img src="/assets/img/62afff7e2de13e28-480.webp" alt="FUMOT LEOPARD 40000 PUFFS — PINK LEMONADE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -817,7 +837,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-leopard-40000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-leopard-40000-puffs-pink-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit sweet">
   <a class="card-media" href="/produkt/fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape/"><img src="/assets/img/afc270e16822b2c8-480.webp" alt="FUMOT ECO 4IN1 80000 PUFFS — Cola Lime &amp; Cherry Cola &amp; Dr Blue &amp; Strawberry Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -828,7 +848,7 @@
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/fumot-eco-4in1-80000-puffs/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-fumot-eco-4in1-80000-puffs-cola-lime-cherry-cola-dr-blue-strawberry-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block alt" id="modele">
@@ -1063,6 +1083,13 @@
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article><article class="article-card">
+  <a class="article-link" href="/blog/cherry-ice-wisnia-w-fumot-eco-tyrant-i-stag-bar/">
+    <span class="article-kicker">2026-10-17</span>
+    <h3>Cherry ice: wiśnia w FUMOT ECO, TYRANT i STAG BAR</h3>
+    <p>Krótko: jeśli twoja jednorazówka cherry ice smakuje „płasko”, w większości przypadków masz w rękach po prostu inny wariant wiśniowy niż myślisz.</p>
+    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
+  </a>
+</article><article class="article-card">
   <a class="article-link" href="/blog/co-to-jest-fumot-20k-i-czy-w-ogole-istnieje/">
     <span class="article-kicker">2026-09-09</span>
     <h3>Co to jest Fumot 20k i czy w ogóle istnieje?</h3>
@@ -1083,20 +1110,13 @@
     <p>Wpisując „fomud” w wyszukiwarkę, w zdecydowanej większości przypadków szukasz e-papierosa marki Fumot.</p>
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
-</article><article class="article-card">
-  <a class="article-link" href="/blog/fomud-to-fumot-wlasciwa-pisownia-4-modele-i-koszt-pufy/">
-    <span class="article-kicker">2026-09-22</span>
-    <h3>Fomud to FUMOT: właściwa pisownia, 4 modele i koszt pufy</h3>
-    <p>Jeśli w wyszukiwarce wpisałeś fomud, to nie znalezisz żadnej marki o tej nazwie. To literówka popularnego producenta FUMOT, a dokładnie litera u stoi</p>
-    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
-  </a>
 </article></div></section><section class="block alt" id="faq"><div class="block-head"><div><span class="kicker sm">Masz pytania?</span><h2>Częste pytania</h2></div><a class="more" href="/faq/">Pełne FAQ →</a></div><div class="faq-list"><details><summary>Ile kosztują produkty FUMOT na vapepl.com?</summary><div class='faq-a'>Aktualne ceny FUMOT zaczynają się od 60 zł i sięgają 125 zł za sztukę. Przy zakupie 3+ sztuk rabat rośnie do −20% przy 15+ sztukach. Wszystkie zamówienia realizuje vapepl.com.</div></details><details><summary>Ile zaciągnięć oferuje FUMOT?</summary><div class='faq-a'>Liczba zaciągnięć zależy od modelu — od 9 000 do 80 000 puffs. Szczegóły każdej serii znajdziesz na stronie modelu.</div></details><details><summary>Jakie modele FUMOT są dostępne?</summary><div class='faq-a'>W sprzedaży dostępne są modele: FUMOT RANDM TORNADO 15000 PUFFS, FUMOT RANDM TORNADO 9000 PUFFS, FUMOT LEOPARD 40000 PUFFS, FUMOT ECO 4IN1 80000 PUFFS. Każdy model występuje w wielu wariantach smakowych — pełną listę znajdziesz w zakładce Produkty.</div></details><details><summary>Czy rabaty ilościowe działają automatycznie?</summary><div class='faq-a'>Tak. Rabat nalicza się automatycznie w koszyku na vapepl.com: 3+ szt. −5%, 5+ szt. −8%, 10+ szt. −12%, 15+ szt. −20%.</div></details><details><summary>Czy strona sprzedaje produkty?</summary><div class='faq-a'>Nie. Ten serwis to przewodnik po produktach FUMOT — zamawianie i płatność odbywają się wyłącznie na vapepl.com.</div></details></div></section><section class="cta-panel">
   <div class="cta-panel-in">
     <h2>Gotowy na zamówienie?</h2>
     <p>Realizacja i płatność wyłącznie na <strong>vapepl.com</strong> — rabaty do −20% naliczają się automatycznie w koszyku.</p>
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=cta-final" target="_blank" rel="noopener">Kup FUMOT na VapePL.COM</a>
   </div>
-</section><div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=fumot&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
+</section>
 </main>
 <footer class="site-foot">
   <div class="wrap">
